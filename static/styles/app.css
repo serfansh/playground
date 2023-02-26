@@ -1,0 +1,33 @@
+.c-item {
+  height: 500px;
+}
+
+.c-img {
+  height: 110%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.card-item {
+  height: 260px;
+  width: 400px;
+}
+
+.card-img {
+  height: 100%;
+  width: 106.7%;
+  object-fit: cover;
+  border-radius: inherit;
+
+  align-self: center;
+  transform: scale(1.01);
+}
+
+.card-img:hover {
+  opacity: 1;
+}
+
+.tile:hover {
+  transform: scale(1.1);
+}
+

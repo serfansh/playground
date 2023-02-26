@@ -1,0 +1,123 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active c-item">
+                    <img src="static/images/carousel/darksouls.jpg" class="d-block w-100 c-img" alt="..." >
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Impress With Your Dress</h1>
+                        <p>best dress you will find in internet.</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item c-item">
+                    <img src="static/images/carousel/knight1.jpg" class="d-block w-100 c-img" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Revolutionize Your Fashion</h1>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+        
+                <div class="carousel-item c-item">
+                    <img src="static/images/carousel/samuraii.jpg" class="d-block w-100 c-img" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h1>Stole Other People Eyes</h1>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+            </div>
+            
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+<!-- <div class="container-fuild text-center bg-gradient bg-light p-3"><h1>Wellcome to PavinShop</h1></div> -->
+
+<div class="d-flex justify-content-center p-5 bg-gradient bg-body-secondary">
+  <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+        <div class="card text-bg-dark card-item m-2" style="text-align: center;">
+            <img src="static/images/carousel/samuraii.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+            <h3 class="card-title">Women</h3>
+            </div>
+        </div>
+
+        <div class="card text-bg-dark card-item m-2" style="text-align: center;">
+            <img src="static/images/carousel/samuraii.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+            <h3 class="card-title">Girls</h3>
+            </div>
+        </div>
+
+        <div class="card text-bg-dark card-item m-2" style="text-align: center;">
+            <img src="static/images/carousel/samuraii.jpg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+            <h3 class="card-title">Boys</h3>
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="container text-center bg-gradient bg-light p-3"><h2>Last Proudcts</h2></div>
+<div class="container p-5 bg-gradient bg-body-tertiary">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    {% for product in products %}
+    <div class="col">
+      <div class="tile">
+      <div class="card">
+        <img src="static/images/carousel/darksouls.jpg" class="card-img-top" style="height: 19rem;   object-fit: cover;" alt="...">
+        <div class="card-body">
+          <h4 class="card-title">{{product.name}}</h4>
+          <h5 class="card-text">${{product.price}}</h5>
+        </div>
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+    <div class="col">
+      <div class="tile">
+      <div class="card">
+        <img src="static/images/carousel/darksouls.jpg" class="card-img-top" style="height: 19rem;   object-fit: cover;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Leather Pants</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="tile">
+      <div class="card">
+        <img src="static/images/carousel/darksouls.jpg" class="card-img-top" style="height: 19rem;  object-fit: cover;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="tile">
+      <div class="card">
+        <img src="static/images/carousel/darksouls.jpg" class="card-img-top" style="height: 19rem;  object-fit: cover;" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
